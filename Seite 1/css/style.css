@@ -1,0 +1,53 @@
+a {
+    color: orangered;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px dotted #0019F8;
+    text-decoration: none;
+}
+
+img {
+    border: 2px solid rgba(255, 68, 0, 0.4);
+}
+
+html {
+    background-image: url("../img/rau.jpg");
+    display: block;
+    align-content: center;
+    text-align: center;
+    color: white;
+    font-family: pricedown;
+    font-size: 120%;
+}
+
+.prev {
+    transform: translate(-1000%);
+    animation: inPrev 2s ease forwards;
+}
+.next {
+    transform: translate(1000%);
+    animation: inNext 2s ease forwards;
+}
+
+@keyframes inNext {
+    from {
+        transform: translateX(1000%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes inPrev {
+    from {
+        transform: translateX(-1000%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@font-face {
+    font-family: pricedown;
+    src: url(pricedown.ttf);
+}
