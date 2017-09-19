@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
+    <!-- Kopfparameter - Einfach ignorieren... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Seitentitel -->
     <title>Igel</title>
+    <!-- Einbindung der JavaScript-Datei -->
     <script src="pageManager.js"></script>
+    <!-- Einbindung des Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+<!--
+onload bewirkt, dass sobald der Body tag komplett geladen ist, der JavaScript code der sich darin befindet ausgeführt wird.
+
+In diesem Fall sage ich nur, dass überhaupt ein Bild angezeigt wird...
+Mehr dazu in der JavaScript datei.
+-->
 <body onload="page(0)">
+    <!-- Die Source ("src") ist leer, da Javascript das ganze übernimmt. -->
     <img src="" alt="Hier sollte ein Bild sein" id="img"><br>
+    <!--
+    Die navigation.
+    
+    onclick bewirkt, dass sobald auf das Element geklickt wird, der entsprechende JavaScript Code ausgeführt wird.
+    In dem Fall eine Seite vor, bzw. zurück
+
+    Die "#" im href Attribut bewirkt, das kein Link geladen wird. Da der A-Tag nicht als Link fungiert, wenn href leer ist, ist das die einfachste Problemlösung.
+    -->
     <a class="prev" href="#" onclick="page(-1)">Vorheriges Bild</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="next" href="#" onclick="page(1)">Nächstes Bild</a>
 </body>
 </html>
